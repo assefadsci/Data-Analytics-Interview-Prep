@@ -1,4 +1,5 @@
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://data-analytics-interview-prep-ocisqsdguzcbr8sqxbmuo7.streamlit.app/) # Data-Analytics-Interview-Prep
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://data-analytics-interview-prep-ocisqsdguzcbr8sqxbmuo7.streamlit.app/) 
+# Data-Analytics-Interview-Prep
 This Streamlit app is a Data Analytics Interview Preparation resource that provides a collection of 115 questions focused on data structures and algorithms, essential pillars of data analytics. You can use this app to practice and receive feedback on your answers to these questions.
 
 ## Features
