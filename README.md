@@ -25,6 +25,6 @@ This Streamlit app is a Data Analytics Interview Preparation resource that provi
 
 ## Contributing
 
-We welcome contributions to improve this resource. Feel free to submit pull requests with new questions, bug fixes, or enhancements.
+I welcome contributions to improve this resource. Feel free to submit pull requests with new questions, bug fixes, or enhancements.
 
 
