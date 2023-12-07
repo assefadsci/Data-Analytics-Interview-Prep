@@ -4,7 +4,6 @@ import streamlit as st
 import streamlit.components.v1 as components
 from streamlit_gsheets import GSheetsConnection
 
-
 # Set the configuration for the Streamlit app
 st.set_page_config(
     page_title='Data Analytics Interview Prep',
@@ -16,20 +15,23 @@ st.set_page_config(
 st.title('📈 :rainbow[Data Analytics Interview Prep]')
 st.subheader('')
 
-# Sidebar section with introductory information
-with st.sidebar:
-    st.info('🙋‍ :rainbow[**Hi,  Welcome to the Data Analytics Interview Prep! Click Question to start.**] ')
-    st.info('This comprehensive resource is tailored to help you excel in your data analytics interviews. '
-            'We\'ve curated a collection of 115 questions that primarily focus on data '
-            'structures and algorithms – two essential pillars of data analytics. 🚀')
+# Initialize session state
+if 'index' not in st.session_state:
+    st.session_state.index = 0
 
-    st.divider()
+if 'user_response' not in st.session_state:
+    st.session_state.user_response = ""
 
-    # Display creator information and links
-    st.write("""
-    Nov 2023 | [Efrem Assefa](https://www.linkedin.com/in/efrem-assefa-bbb286237)
-            """)
+if 'submit_clicked' not in st.session_state:
+    st.session_state['submit_clicked'] = False
 
+# Load custom CSS style for the app
+@st.cache_data
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+local_css("style.css")
 
 # Define a function to load the dataset from Google Sheets
 @st.cache_data()
@@ -42,11 +44,6 @@ def load_dataset():
         st.error(f"An error occurred while loading the dataset: {str(e)}")
         return None
 
-
-# Load the dataset
-df = load_dataset()
-
-
 # Define a function to load the spaCy NLP model
 @st.cache_resource()
 def load_spacy():
@@ -57,15 +54,9 @@ def load_spacy():
         st.error(f"An error occurred while loading the spaCy model: {str(e)}")
         return None
 
-
-# Load the spaCy NLP model
+# Load the dataset and spaCy NLP model
+df = load_dataset()
 model = load_spacy()
-
-
-# Initialize the session state index if it doesn't exist
-if 'index' not in st.session_state:
-    st.session_state.index = 0
-
 
 # Define a function for text-to-speech output in the browser
 def text_to_speech_browser(text, rate=1):
@@ -79,52 +70,122 @@ def text_to_speech_browser(text, rate=1):
     """
     components.html(js, height=0, width=0)
 
-
 # Define a function to display a question
-def display_question(index):
+def display_question(index, category):
+    st.session_state.user_response = ""
     try:
-        question = df['questions'].iloc[index]
-        st.subheader(question)
-        text_to_speech_browser(question)
+        # Filter the dataset based on the selected category
+        if category != "All":
+            filtered_df = df[df['category'].str.lower() == category.lower()]
+        else:
+            filtered_df = df
+
+        if index < len(filtered_df):
+            question = filtered_df['questions'].iloc[index]
+            st.subheader(question)
+            text_to_speech_browser(question)
+        else:
+            st.warning("No more questions in this category.")
     except Exception as e:
         st.error(f"An error occurred while displaying the question: {str(e)}")
 
+# Define a function to evaluate user responses against correct answers
+def evaluate_response(user_response, correct_answer):
+    try:
+        doc1 = model(user_response)
+        doc2 = model(correct_answer)
+
+        if doc1.has_vector and doc2.has_vector:
+            similarity = doc1.similarity(doc2)
+        else:
+            similarity = 0.0
+
+        if similarity > 0.95:
+            feedback = 'Excellent!'
+        elif 0.8 <= similarity <= 0.95:
+            feedback = 'Good effort, but there is room for improvement.'
+        elif 0 < similarity < 0.8:
+            feedback = 'Let us work on this together. It appears there is room for improvement in your response. ' \
+                       'Keep practicing, you are on the right track.'
+        elif similarity == 0:
+            feedback = 'Please provide your answer to the question to receive feedback.'
+        else:
+            feedback = 'Your response appears to be quite different from the expected answer. ' \
+                       'Lets take a look at the correct answer to help you understand the key.'
+
+        return feedback
+
+    except Exception as e:
+        st.error(f"An error occurred while evaluating the response: {str(e)}")
+        return 'An error occurred during evaluation.'
 
 # Define a function to show the correct answer and feedback
-def show_correct_answer(index):
+def show_feedback(index, category):
     try:
-        correct_answer = df['answers'].iloc[index]
-        st.info(f'{correct_answer}')
-        text_to_speech_browser(f' {correct_answer}')
-            # f'{feedback} {answer}. To proceed to question # {index + 2}, click on the Question button.')
+        # Filter the dataset based on the selected category
+        if category != "All":
+            filtered_df = df[df['category'].str.lower() == category.lower()]
+        else:
+            filtered_df = df
 
+        if index < len(filtered_df):
+            answer = filtered_df['answers'].iloc[index]
+            user_response = st.session_state.get('user_response', '')
+            # st.write(user_response)
+            feedback = evaluate_response(user_response, answer)
+
+            if feedback == 'Please provide your answer to the question to receive feedback.':
+                st.info(f'{feedback} Click on "Previous", to revisit the question.')
+                text_to_speech_browser(f'{feedback} Click on previous, to revisit the question.')
+            else:
+                st.info(f'{feedback} {answer}')
+                text_to_speech_browser(f'{feedback} {answer}')
+        else:
+            st.warning("No more answers in this category.")
     except Exception as e:
         st.error(f"An error occurred while showing the correct answer: {str(e)}")
 
+# Sidebar section with introductory information
+st.sidebar.info('🙋‍ :rainbow[**Welcome to the Data Analytics Interview Prep!**] 🎉🎉')
+category = st.sidebar.selectbox(":red[**SELECT A CATEGORY:**]", ["All", "Behavioral", "Conceptual", "Technical"])
+st.sidebar.info(':rainbow[**Start your preparation by clicking the "Question" button below. Cheers!**] ✨🎈')
 
-# Define the layout with three buttons for Question, Feedback, and Previous
-col1, col2,  col3 = st.columns(3)
-st.write('')
-with col1:
-    question_button = st.button('Question', type="primary", use_container_width=True)
-
-with col2:
-    feedback_button = st.button('Show answer', type="primary", use_container_width=True)
-
-with col3:
-    previous_button = st.button('Previous', type="primary", use_container_width=True)
-
-# Handle button actions
-if question_button:
-    display_question(st.session_state.index)
-
-
-if feedback_button:
-    show_correct_answer(st.session_state.index)
-    st.session_state.index += 1
-
-if previous_button:
+# Sidebar buttons
+if st.sidebar.button('Question', type="primary"):
+    st.session_state['display'] = 'question'
+    st.session_state.submit_clicked = False
+if st.sidebar.button('Answer', type="primary"):
+    st.session_state['display'] = 'answer'
+    st.session_state.submit_clicked = False
+if st.sidebar.button('Feedback', type="primary"):
+    st.session_state['display'] = 'feedback'
+if st.sidebar.button('Previous', type="primary"):
     if st.session_state.index > 0:
         st.session_state.index -= 1
-        display_question(st.session_state.index)
+        st.session_state['display'] = 'question'
+        st.session_state.submit_clicked = False
+st.sidebar.divider()
+st.sidebar.write("Nov 2023 | [Efrem Assefa](https://www.linkedin.com/in/efrem-assefa-bbb286237)")
 
+# Load initial image and text
+if 'display' not in st.session_state:
+    st.image('img.png', caption='Welcome to Data Analytics Interview Prep!', width=700)
+
+# Displaying results on the main page
+if 'display' in st.session_state:
+    if st.session_state['display'] == 'question':
+        display_question(st.session_state.index, category)
+    elif st.session_state['display'] == 'answer':
+        with st.form('answer_form'):
+            st.session_state.user_response = st.text_area(':rainbow[**Type your answer below:**]', height=100)
+            submit_btn = st.form_submit_button('Submit Answer', type="primary")
+            if submit_btn:
+                st.session_state.submit_clicked = True
+    elif st.session_state['display'] == 'feedback':
+        show_feedback(st.session_state.index, category)
+        st.session_state.index += 1
+
+# Handle submit button action
+if st.session_state.submit_clicked:
+    st.success('✅ Answer submitted! 🎆🎉')
+    st.session_state.submit_clicked = False
