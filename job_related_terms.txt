@@ -1,0 +1,585 @@
+A B testing
+AVL tree
+Abstract data type
+Access
+Access control
+Accessibility
+Accessing
+Accountability
+Accuracy
+Acquisition cost
+Adjacency list
+Adjacency matrix
+Aesthetic
+Agenda
+Aggregation
+Agile
+Algorithm
+Algorithm design
+Algorithm design paradigms
+Aliasing
+Alternative text
+Amazon Redshift
+Amazon Web Services
+Amortized analysis
+Analysis
+Analyst
+Analytical skills
+Analytical thinking
+Analytics
+Analyze
+Annotation
+Anomaly detection
+Anscombe's quartet
+Apache Spark
+Application Programming Interface
+Approximation algorithms
+Area chart
+Argument
+Arithmetic operator
+Array
+Artificial Intelligence
+AI
+Assignment operator
+Asymptotic analysis
+Asymptotic equivalence
+Attribute
+Audio file
+Augmented Analytics
+Average
+Average order value (AOV)
+Average-case analysis
+Averageif
+Azure
+B tree
+Backtracking
+Bad data source
+Balance
+Bar graph
+Best case analysis
+Bias
+Big Data
+Big O notation
+Big Omega notation
+Big Theta notation
+Big data
+Binary search tree
+Binary tree
+Blockchain
+Boolean data
+Borders
+Box plot
+Branch and bound
+Brute force
+Bubble chart
+Bullet graph
+Business
+Business task
+C#
+C++
+CAST
+CCPA
+COALESCE
+CONCAT
+CONCATENATE
+COUNTA
+COUNTIF
+COUNT_DISTINCT
+CRAN
+CREATE_TABLE
+CSS
+CSV
+Calculate
+Calculated field
+Calculating
+Calculation
+Calculations
+Calculus
+Cascading Style Sheets
+Case study
+Causation
+Cell reference
+Channel
+Chart
+Charts
+Churn rate
+Circle view
+Classification
+Cleansing
+Click-through rate (CTR)
+Cloud
+Cloud Computing
+Cloud computing
+Cloud-based
+Cluster
+Clustering
+Code
+Coding
+Collaboration
+Column chart
+Combo chart
+Communication
+Compatibility
+Completeness
+Complexity analysis
+Comprehensive R Archive Network
+Computer programming
+Computer vision
+Conditional formatting
+Conditional statement
+Confidence interval
+Confirmation bias
+Consent
+Consistency
+Context
+Continuous data
+Conversion rate
+Cookie
+Correlation
+Creativity
+Critical thinking
+Cross field validation
+Cross-Validation
+Currency
+Customer Analytics
+Customer acquisition cost (CAC)
+Customer lifetime value (CLTV)
+DATEDIF
+DISTINCT
+DROP_TABLE
+Dashboard
+Dashboard basics
+Dashboard filters
+Dashboards
+Data
+Data Architecture
+Data Cleaning
+Data Compliance
+Data Engineering
+Data Ethics
+Data Governance
+Data Integration
+Data Lake
+Data Literacy
+Data Mining
+Data Modeling
+Data Privacy
+Data Quality
+Data Science
+Data Security
+Data Visualization
+Data Warehouse
+Data Wrangling
+Data analysis
+Data analysis process
+Data analyst
+Data analytics
+Data bias
+Data blending
+Data cleansing
+Data composition
+Data constraints
+Data design
+Data driven decision making
+Data driven storytelling
+Data ecosystem
+Data element
+Data engineer
+Data ethics
+Data field
+Data fields
+Data frame
+Data governance
+Data inspired decision making
+Data integration
+Data integrity
+Data interoperability
+Data lakes
+Data life cycle
+Data manipulation
+Data mapping
+Data merging
+Data model
+Data pipelines
+Data privacy
+Data quality
+Data range
+Data replication
+Data science
+Data scientist
+Data security
+Data storytelling
+Data strategy
+Data structure
+Data structure implementation
+Data technician
+Data transformation
+Data type
+Data validation
+Data value
+Data visualization
+Data visualization basics
+Data warehousing
+Data warehousing specialist
+Data-driven
+DataOps
+DataViz
+Database
+Database Management
+Database and query basics
+Dataset
+Decision Making
+Decision tree
+Decision-making
+Deep Learning
+Deep learning
+Delimiter
+Democratization of data
+Density map
+Descriptive metadata
+Design
+Design thinking
+DevOps
+Digital photo
+Dimensionality Reduction
+Dimensionality reduction
+Dirty data
+Discrete data
+Distribution graph
+Diverging color palette
+Divide and conquer
+Donut chart
+Duplicate data
+Dynamic programming
+Dynamic visualizations
+ETL
+Elevator pitch
+Emphasis
+Empirical analysis
+Engagement
+Equation
+Estimated response rate
+Ethics
+Evidence-based
+Excel
+Experimenter bias
+Explainability
+External data
+FWF
+Facets
+Factor
+Fairness
+Feature Engineering
+Feature Selection
+Fibonacci heap
+Field
+Field length
+Fill handle
+Filled map
+Filter
+Filtering
+Finance
+Financial analyst
+Find and replace
+Find patterns
+Finding patterns
+First party data
+Fixed width file
+Float
+Forecasting
+Foreign key
+Formula
+Formulas
+Framework
+Function
+Functions
+GAM smoothing
+GDPR
+GROUP_BY
+Gantt chart
+Gap analysis
+Gauge chart
+General Data Protection Regulation
+Generate
+Generating
+Geolocation
+Geom
+Good data source
+Google Cloud
+Google Data Studio
+Graph
+Graph algorithms
+Graphs
+Greedy algorithm
+HTML
+HTML5
+Hadoop
+Hash table
+Header
+Headline
+Healthcare
+Healthcare analyst
+Heap
+Heat map
+Heuristics
+Highlight table
+Histogram
+Hypothesis
+Hypothesis testing
+IDE
+INNER_JOIN
+Inaccurate data
+Incomplete data
+Inconsistent data
+Incorrect data
+Infographics
+Inline code
+Inner query
+Innovation
+Insight
+Insights
+Insights-driven
+Integrated Development Environment
+Internet of Things
+Internet of Things (IoT)
+Java
+Job portfolio
+Jupyter Notebook
+KPI
+Key performance indicator (KPI)
+LEFT_JOIN
+LEN
+Label
+Labels and annotations
+Leading question
+Legend
+Length
+Library
+Line graph
+Linked list
+List
+Live data
+Loess smoothing
+Log file
+Logical operator
+Lower bound
+MAXIFS
+MLOps
+Machine Learning
+Machine Learning Algorithms
+Machine learning
+Mandatory
+Map
+Mapping
+Maps
+Margin of error
+Mark
+Markdown
+Market Analysis
+Marketing
+Marketing analyst
+Master data management
+Math expression
+Math function
+McCandless Method
+Memory management
+Metadata
+Metrics
+Minimum spanning tree
+Model Tuning
+Natural Language Processing
+Natural language processing (NLP)
+Net promoter score (NPS)
+Network flow
+Neural Networks
+Online algorithms
+Open source
+Optimization
+Patterns
+Power BI
+Predictions
+Predictive
+Predictive Analytics
+Prescriptive
+Principal Component Analysis
+Problem-solving
+Python
+QlikView
+Qualitative Analysis
+Quantitative Analysis
+Quantum computing
+Queue
+R
+R Programming
+RIGHT JOIN
+Randomized algorithms
+Range
+Ranking
+Real-time
+Real-time Analysis
+Record
+Recursion
+Red-black tree
+Redundancy
+Reframing
+RegEx
+Regression
+Regression analysis
+Regular expression
+Relational database
+Relativity
+Relevant question
+Remove duplicates
+Repetition
+Report
+Reporting
+Return on Investment
+Return on investment
+Return on investment (ROI)
+Revenue
+Rhythm
+Root cause
+Ruby
+Runtime performance
+SELECT INTO
+SMART methodology
+SQL
+SQL function
+SQL functions
+SUBSTR
+SUM
+SUM product
+SUMIF
+Sales Analytics
+Sample
+Sampling bias
+Scalability
+Scalable
+Scatter plot
+Schema
+Scope of work
+Searching algorithms
+Second party data
+Sentiment Analysis
+Shiny
+Shortest path
+Small data
+Smoothing
+Smoothing line
+Social media
+Soft skills
+Software
+Sort
+Sort range
+Sort sheet
+Sorting
+Sorting algorithms
+Space complexity
+Spark
+Specific question
+Sponsor
+Spotlighting
+Spreadsheet
+Spreadsheet basics
+Spreadsheet formulas
+Spreadsheet functions
+Stack
+Stakeholder
+Stakeholder management
+Stat
+Static data
+Static visualizations
+Statistical Analysis
+Statistical analysis
+Statistical power
+Statistical significance
+Statistics
+Stats
+Story
+Storytelling
+String algorithms
+String data type
+Structural metadata
+Structured Query Language
+Structured data
+Structured thinking
+Substring
+Subtitle
+Summary table
+Swift
+Symbol map
+Syntax
+TRIM
+TSV
+Tab separated values file
+Table
+Tableau
+Tableau software
+Tables
+Team management
+Technical mindset
+Temporary table
+Temporary tables
+Text Analytics
+Text analysis
+Text data type
+Text string
+Third party data
+Tibble
+Tidy data
+Tidyverse
+Time Series
+Time bound question
+Time complexity
+Time series analysis
+Tool
+Tools
+Topological sort
+Trade-offs
+Transaction transparency
+Transferable skills
+Transparency
+Tree
+Trends
+Trie
+Trust
+Turnover rate
+Type
+Typecasting
+Unbiased sampling
+Underscores
+Unfair question
+Unique
+Unity
+Unstructured data
+Upper bound
+User experience
+VLOOKUP
+Validate
+Validation
+Validity
+Variable
+Variables
+Vector
+Verification
+Video file
+Vignette
+Visual
+Visual form
+Visual storytelling
+Visualization
+Visualize
+Visualizing
+Web Analytics
+Wide data
+Worst-case analysis
+Writing functions
+X axis
+Y axis
+YAML
+dplyr
+ggplot
+head()
+mutate()
+readr
+tidyr

@@ -1,9 +1,40 @@
+.stApp {
+    background: #000000;
+    color: #F99417;
+}
+
+.stApp header {
+    background: #000000;
+}
+
+section[data-testid="stSidebar"]{
+    background-color: #191919;
+    color:#000000;
+}
+
+div[role="alert"]{
+    background-color: #FEC260;
+    color:#000000;
+}
+div[value="0"]{
+    color: #000000;
+}
+
+.st-bx{
+    background-color:#FEC260;
+    color: #000000;
+}
+label[data-testid="stWidgetLabel"]{
+    color:#ffffff;
+}
 button[kind="primary"]{
-    color: #fdde81;
     width: 100px;
     height: 20px;
 }
 
+a[href="https://www.linkedin.com/in/efrem-assefa-bbb286237"]{
+    color: #ffffff;
+}
 
 
 
