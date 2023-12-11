@@ -20,8 +20,7 @@ This Streamlit app is a Data Analytics Interview Preparation resource that provi
 ## Usage
 
 1. Click the `Question` button to display the next question.
-2. Answer the question and click the `Show answer` button to see the correct answer and feedback.
-3. Click the `Previous` button to go back to the previous question.
+2. Answer the question and click the `Submit` button to see the correct answer and feedback.
 
 ## Contributing
 
